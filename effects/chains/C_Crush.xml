@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<EffectChain>
+ <Name>C_Crush</Name>
+ <MixMode>DRY/WET</MixMode>
+ <SuperParameterValue>0.5</SuperParameterValue>
+ <Effects>
+  <Effect>
+   <MetaParameterValue>0.5</MetaParameterValue>
+   <Id>org.mixxx.effects.bitcrusher</Id>
+   <BackendType>Built-In</BackendType>
+   <Parameters>
+    <Parameter>
+     <Id>bit_depth</Id>
+     <Value>10.3723</Value>
+     <LinkType>LINKED_LEFT_RIGHT</LinkType>
+     <LinkInversion>1</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>downsample</Id>
+     <Value>0.60606</Value>
+     <LinkType>LINKED_LEFT_RIGHT</LinkType>
+     <LinkInversion>1</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+   </Parameters>
+  </Effect>
+  <Effect/>
+  <Effect/>
+  <Effect/>
+ </Effects>
+</EffectChain>
