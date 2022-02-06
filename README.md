@@ -2,6 +2,8 @@
 Pioneer DJ-style extension pack for open source DJ software Mixxx (https://github.com/mixxxdj/mixxx)
 Turn your controller into a standalone deck with any linux-compatible device and a touch screen !
 (https://www.youtube.com/watch?v=IkuiykgW858, https://www.youtube.com/watch?v=kyrJW7Vaf68)
+Big thanks Sven Boekelder, aka @timewasternl for creating the awesome skin I'm building on.
+(Only reason I'm not forking is new folder structure)
 
 # Features
 * Pioneer-style effect chain pack, both for BEAT FX and COLOR FX, with corresponding names and sound profiles
