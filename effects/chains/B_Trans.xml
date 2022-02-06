@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Trans</Name>
+ <Name>B_Trans_g</Name>
  <MixMode>DRY/WET</MixMode>
- <SuperParameterValue>0</SuperParameterValue>
+ <SuperParameterValue>0.00326152</SuperParameterValue>
  <Effects>
   <Effect>
-   <MetaParameterValue>0</MetaParameterValue>
+   <MetaParameterValue>0.00326152</MetaParameterValue>
    <Id>org.mixxx.effects.tremolo</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
      <Id>depth</Id>
-     <Value>0.784983</Value>
+     <Value>0.00326152</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>rate</Id>
-     <Value>3.07997</Value>
+     <Value>0.251185</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>

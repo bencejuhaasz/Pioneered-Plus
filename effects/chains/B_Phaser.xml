@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Phaser</Name>
+ <Name>B_Phaser_g</Name>
  <MixMode>DRY/WET</MixMode>
- <SuperParameterValue>0</SuperParameterValue>
+ <SuperParameterValue>0.00326152</SuperParameterValue>
  <Effects>
   <Effect>
-   <MetaParameterValue>0</MetaParameterValue>
+   <MetaParameterValue>0.00326152</MetaParameterValue>
    <Id>org.mixxx.effects.phaser</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
@@ -39,7 +39,7 @@
     </Parameter>
     <Parameter>
      <Id>depth</Id>
-     <Value>0.5</Value>
+     <Value>0.501631</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>

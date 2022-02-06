@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Flanger</Name>
+ <Name>B_Flanger_g</Name>
  <MixMode>DRY/WET</MixMode>
  <SuperParameterValue>0</SuperParameterValue>
  <Effects>

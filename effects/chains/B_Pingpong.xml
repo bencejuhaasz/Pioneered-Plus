@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Pingpong</Name>
+ <Name>B_Pingpong_g</Name>
  <MixMode>DRY/WET</MixMode>
  <SuperParameterValue>0</SuperParameterValue>
  <Effects>
@@ -32,7 +32,7 @@
     </Parameter>
     <Parameter>
      <Id>send_amount</Id>
-     <Value>1</Value>
+     <Value>0</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
