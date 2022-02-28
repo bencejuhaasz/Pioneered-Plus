@@ -156,6 +156,8 @@ PioneerDDJ400.toggleLight = function(midiIn, active) {
 //
 // Init
 //
+ var presscount = 0;
+ var presscount_b = 0;
 
 PioneerDDJ400.init = function() {
     engine.setValue("[EffectRack1_EffectUnit1]", "show_focus", 1);
@@ -165,7 +167,7 @@ PioneerDDJ400.init = function() {
 
     PioneerDDJ400.toggleLight(PioneerDDJ400.lights.deck1.vuMeter, false);
     PioneerDDJ400.toggleLight(PioneerDDJ400.lights.deck2.vuMeter, false);
-
+   
     engine.softTakeover("[Channel1]", "rate", true);
     engine.softTakeover("[Channel2]", "rate", true);
     engine.softTakeover("[EffectRack1_EffectUnit1_Effect1]", "meta", true);
@@ -245,27 +247,37 @@ PioneerDDJ400.beatFxLevelDepthRotate = function(_channel, _control, value) {
 };
 
 PioneerDDJ400.beatFxSelectPreviousEffect = function(_channel, _control, value) {
-    engine.setValue(PioneerDDJ400.focusedFxGroup(), "prev_effect", value);
+     if (value === 0) { return; }
+     if(presscount_b-1>=0) {
+        engine.setValue("[EffectRack1_EffectUnit1]","prev_chain", 1);
+        presscount_b-=1;
+     }
 };
 
 PioneerDDJ400.beatFxSelectNextEffect = function(_channel, _control, value) {
-    engine.setValue(PioneerDDJ400.focusedFxGroup(), "next_effect", value);
+     if (value === 0) { return; }
+     if(presscount_b+1<=5) {
+      engine.setValue("[EffectRack1_EffectUnit1]","next_chain", 1);
+      presscount_b+=1;
+     }
 };
 
 PioneerDDJ400.beatFxLeftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-
-    //engine.setValue("[EffectRack1_EffectUnit1]", "focused_effect", 1);
-    engine.trigger("[QuickEffectRack1_[Channel1]]","prev_chain");
-    engine.trigger("[QuickEffectRack1_[Channel2]]","prev_chain");
+    if(presscount-1>=0) {
+      engine.setValue("[QuickEffectRack1_[Channel1]]","prev_chain", 1);
+      engine.setValue("[QuickEffectRack1_[Channel2]]","prev_chain", 1);
+      presscount-=1;
+    }
 };
 
 PioneerDDJ400.beatFxRightPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-
-    //engine.setValue("[EffectRack1_EffectUnit1]", "focused_effect", 2);
-     engine.SetValue("[QuickEffectRack1_[Channel1]]","next_chain",1);
-     engine.SetValue("[QuickEffectRack1_[Channel1]]","next_chain",1);
+    if(presscount+1<=2) {
+      engine.setValue("[QuickEffectRack1_[Channel1]]","next_chain", 1);
+      engine.setValue("[QuickEffectRack1_[Channel2]]","next_chain", 1);
+      presscount+=1;
+    }
 };
 
 PioneerDDJ400.beatFxSelectPressed = function(_channel, _control, value) {

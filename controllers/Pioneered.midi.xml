@@ -1877,12 +1877,22 @@
             </control>
             <control>
                 <group>[EffectRack1_EffectUnit1]</group>
-                <key>next_chain</key>
+                <key>PioneerDDJ400.beatFxSelectNextEffect</key>
                 <description>MIDI Learned from 2 messages.</description>
                 <status>0x94</status>
                 <midino>0x63</midino>
                 <options>
-                    <normal/>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>PioneerDDJ400.beatFxSelectPreviousEffect</key>
+                <description>MIDI Learned from 2 messages.</description>
+                <status>0x94</status>
+                <midino>0x64</midino>
+                <options>
+                    <script-binding/>
                 </options>
             </control>
             <control>
