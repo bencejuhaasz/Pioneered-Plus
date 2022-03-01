@@ -1,16 +1,16 @@
 <Template>
   <WidgetGroup>
     <Layout>vertical</Layout>
-    <Children>
-      <EffectSelector>
-        <ObjectName>EffectSelector</ObjectName>
-        <EffectRack><Variable name="rack"/></EffectRack>
-        <EffectUnit><Variable name="unit"/></EffectUnit>
-        <Effect><Variable name="effect"/></Effect>
-        <Elide>right</Elide>
-        <Size>0me,50max</Size>
-      </EffectSelector>
-      <PushButton>
+     <Children>
+                  <EffectChainPresetSelector>
+                    <ObjectName>EffectUnit1_kEffectSelectorLeft</ObjectName>
+                    <EffectUnitGroup>[EffectRack1_EffectUnit1]</EffectUnitGroup>
+                  </EffectChainPresetSelector>
+                <Connection>
+                  <ConfigKey persist="true">[Skin],show_eq_knobs</ConfigKey>
+                  <BindProperty>visible</BindProperty>
+                </Connection>
+<PushButton>
         <ObjectName>EffectToggle</ObjectName>
         <Size>0me,25max</Size>
         <NumberStates>2</NumberStates>
@@ -35,6 +35,7 @@
           <ConnectValueToWidget>false</ConnectValueToWidget>
         </Connection>
       </PushButton>
+
     </Children>
   </WidgetGroup>
 </Template>
