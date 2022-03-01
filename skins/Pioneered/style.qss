@@ -107,7 +107,7 @@ QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
 
-WEffectSelector {
+WEffectChainPresetSelector {
   background-color: transparent;
   color: #2d85cd;
   font-size: 14px;
