@@ -155,7 +155,8 @@ PioneerDDJ400.toggleLight = function(midiIn, active) {
 //
 // Init
 //
- var presscount = 0;
+ var presscount_l = 0;
+ var presscount_r = 0;
  var presscount_b = 0;
 
 PioneerDDJ400.init = function() {
@@ -263,19 +264,33 @@ PioneerDDJ400.beatFxSelectNextEffect = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxLeftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount-1>=0) {
+    if(presscount_l-1>=0) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","prev_chain", 1);
+      presscount_l-=1;
+    }
+};
+
+PioneerDDJ400.beatFxLeftShiftPressed = function(_channel, _control, value) {
+    if (value === 0) { return; }
+    if(presscount_r-1>=0) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","prev_chain", 1);
-      presscount-=1;
+      presscount_r-=1;
     }
 };
 
 PioneerDDJ400.beatFxRightPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount+1<=2) {
+    if(presscount_l+1<=2) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","next_chain", 1);
+      presscount_l+=1;
+    }
+};
+
+PioneerDDJ400.beatFxRightShiftPressed = function(_channel, _control, value) {
+    if (value === 0) { return; }
+    if(presscount_r+1<=2) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","next_chain", 1);
-      presscount+=1;
+      presscount_r+=1;
     }
 };
 
