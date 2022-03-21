@@ -19,13 +19,12 @@
 //
 //  Custom (Mixxx specific mappings):
 //      * BeatFX: Assigned Effect Unit 1
-//                < LEFT focus EFFECT1
-//                > RIGHT focus EFFECT2
-//                v FX_SELECT focus EFFECT3.
-//                ON/OFF toggles focused effect slot
-//                SHIFT + ON/OFF disables all three effect slots.
-//                SHIFT + < loads previous effect
-//                SHIFT + > loads next effect
+//                < LEFT Change left color fx
+//                > RIGHT Change left color fx
+//                SHIFT+ < LEFT Change right color fx
+//                SHIFT+ > RIGHT Change right color fx
+//                ON/OFF toggles beat fx
+//                v changes beat fx
 //
 //      * 32 beat jump forward & back (Shift + </> CUE/LOOP CALL arrows)
 //      * Toggle quantize (Shift + channel cue)
