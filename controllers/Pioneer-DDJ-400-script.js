@@ -1,7 +1,7 @@
 // Pioneer-DDJ-400-script.js
 // ****************************************************************************
 // * Mixxx mapping script file for the Pioneer DDJ-400.
-// * Authors: Warker, nschloe, dj3730, jusko
+// * Authors: Warker, nschloe, dj3730, jusko, bencejuhaasz
 // * Reviewers: Be-ing, Holzhaus
 // * Manual: https://manual.mixxx.org/2.3/en/hardware/controllers/pioneer_ddj_400.html
 // ****************************************************************************
