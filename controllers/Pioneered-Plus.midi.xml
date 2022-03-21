@@ -154,7 +154,7 @@
             <control>
                 <group>[EffectRack1_EffectUnit1]</group>
                 <key>super1</key>
-                <description>MIDI Learned from 288 messages.</description>
+                <description>BEAT FX LEVEL - rotate to set</description>
                 <status>0xB4</status>
                 <midino>0x02</midino>
                 <options>
@@ -594,7 +594,7 @@
             <control>
                 <group>[QuickEffectRack1_[Channel1]]</group>
                 <key>super1</key>
-                <description>FILTER CH1 - rotate - Filter Effect Knob</description>
+                <description>COLOR FX CH1 - rotate - Color Effect Knob</description>
                 <status>0xB6</status>
                 <midino>0x17</midino>
                 <options>
@@ -604,7 +604,7 @@
             <control>
                 <group>[QuickEffectRack1_[Channel2]]</group>
                 <key>super1</key>
-                <description>FILTER CH2 - rotate - Filter Effect Knob</description>
+                <description>COLOR FX CH2 - rotate - Color Effect Knob</description>
                 <status>0xB6</status>
                 <midino>0x18</midino>
                 <options>
