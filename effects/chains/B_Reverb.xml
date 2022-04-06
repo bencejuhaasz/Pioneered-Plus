@@ -32,7 +32,7 @@
     </Parameter>
     <Parameter>
      <Id>send_amount</Id>
-     <Value>0.6257</Value>
+     <Value>0</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
