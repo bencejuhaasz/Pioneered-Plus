@@ -152,14 +152,20 @@ PioneerDDJ400.toggleLight = function(midiIn, active) {
     midi.sendShortMsg(midiIn.status, midiIn.data1, active ? 0x7F : 0);
 };
 
-//Variables for effect selector range boundaries
- var presscount_l = 0;
- var presscount_r = 0;
- var presscount_b = 0;
-
 //
 // Init
 //
+
+var used_padfx_racks=0;
+
+var padfx1_unit=0;
+var padfx2_unit=0;
+var padfx3_unit=0;
+var padfx4_unit=0;
+var padfx5_unit=0;
+var padfx6_unit=0;
+var padfx7_unit=0;
+var padfx8_unit=0;
 
 PioneerDDJ400.init = function() {
     engine.setValue("[EffectRack1_EffectUnit1]", "show_focus", 1);
@@ -213,7 +219,6 @@ PioneerDDJ400.focusedFxGroup = function() {
 //
 // Channel level lights
 //
-
 PioneerDDJ400.vuMeterUpdate = function(value, group) {
     var newVal = value * 150;
 
@@ -243,7 +248,7 @@ PioneerDDJ400.toggleFxLight = function(_value, _group, _control) {
 
 PioneerDDJ400.beatFxSelectPreviousEffect = function(_channel, _control, value) {
      if (value === 0) { return; }
-     if(presscount_b-1>=0) {
+     if(true) {
         engine.setValue("[EffectRack1_EffectUnit1]","prev_chain", 1);
         presscount_b-=1;
      }
@@ -251,7 +256,7 @@ PioneerDDJ400.beatFxSelectPreviousEffect = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxSelectNextEffect = function(_channel, _control, value) {
      if (value === 0) { return; }
-     if(presscount_b+1<=5) {
+     if(true) {
       engine.setValue("[EffectRack1_EffectUnit1]","next_chain", 1);
       presscount_b+=1;
      }
@@ -259,7 +264,7 @@ PioneerDDJ400.beatFxSelectNextEffect = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxLeftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount_l-1>=0) {
+    if(true) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","prev_chain", 1);
       presscount_l-=1;
     }
@@ -267,7 +272,7 @@ PioneerDDJ400.beatFxLeftPressed = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxLeftShiftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount_r-1>=0) {
+    if(true) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","prev_chain", 1);
       presscount_r-=1;
     }
@@ -275,7 +280,7 @@ PioneerDDJ400.beatFxLeftShiftPressed = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxRightPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount_l+1<=2) {
+    if(true) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","next_chain", 1);
       presscount_l+=1;
     }
@@ -283,7 +288,7 @@ PioneerDDJ400.beatFxRightPressed = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxRightShiftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    if(presscount_r+1<=2) {
+    if(true) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","next_chain", 1);
       presscount_r+=1;
     }
@@ -295,9 +300,227 @@ PioneerDDJ400.beatFxSelectPressed = function(_channel, _control, value) {
     engine.setValue("[EffectRack1_EffectUnit1]", "focused_effect", 3);
 };
 
+
+PioneerDDJ400.PADFX1 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx1_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+			midi.sendShortMsg(0x97, 0x10, 0x7F);
+		}
+	} else {
+		var unit = padfx1_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		midi.sendShortMsg(0x97, 0x10, 0x00);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX2 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx2_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",2);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+		}
+	} else {
+		var unit = padfx2_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX3 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx3_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",3);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+		}
+	} else {
+		var unit = padfx3_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+PioneerDDJ400.PADFX4 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx4_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",4);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+		}
+	} else {
+		var unit = padfx4_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX5 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx5_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+		}
+	} else {
+		var unit = padfx5_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX6 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx6_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",2);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+		}
+	} else {
+		var unit = padfx6_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX7 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx7_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",3);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+		}
+	} else {
+		var unit = padfx7_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
+PioneerDDJ400.PADFX8 = function(_channel, control, value, _status, group) {
+	if (value) {
+		if (used_padfx_racks<3) {
+			used_padfx_racks++;
+			var unit = used_padfx_racks+1;
+			padfx8_unit=unit;
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",4);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+     			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+ 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+		}
+	} else {
+		var unit = padfx8_unit;
+		used_padfx_racks--;
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
+		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+	}
+
+};
+
+
 PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxGroup(), "enabled");
+    var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxroup(), "enabled");
     engine.setValue("[EffectRack1_EffectUnit1_Effect1]", "enabled", toggleEnabled);
      engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "enabled", toggleEnabled);
  engine.setValue("[EffectRack1_EffectUnit1_Effect3]", "enabled", toggleEnabled);

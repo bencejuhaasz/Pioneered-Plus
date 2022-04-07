@@ -1615,6 +1615,86 @@
                     <script-binding/>
                 </options>
             </control>
+	    <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX1</key>
+                <description>PADFX1 Left</description>
+                <status>0x97</status>
+                <midino>0x10</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX2</key>
+                <description>PADFX2 Left</description>
+                <status>0x97</status>
+                <midino>0x11</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX3</key>
+                <description>PADFX3 Left</description>
+                <status>0x97</status>
+                <midino>0x12</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX4</key>
+                <description>PADFX4 Left</description>
+                <status>0x97</status>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX5</key>
+                <description>PADFX5 Left</description>
+                <status>0x97</status>
+                <midino>0x14</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX6</key>
+                <description>PADFX6 Left</description>
+                <status>0x97</status>
+                <midino>0x15</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX7</key>
+                <description>PADFX7 Left</description>
+                <status>0x97</status>
+                <midino>0x16</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.PADFX8</key>
+                <description>PADFX8 Left</description>
+                <status>0x97</status>
+                <midino>0x17</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
             <control>
                 <group>[Channel1]</group>
                 <key>PioneerDDJ400.toggleLoopAdjustIn</key>
