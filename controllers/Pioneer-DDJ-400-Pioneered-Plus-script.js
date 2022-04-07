@@ -204,6 +204,12 @@ PioneerDDJ400.init = function() {
     midi.sendSysexMsg([0xF0, 0x00, 0x40, 0x05, 0x00, 0x00, 0x02, 0x06, 0x00, 0x03, 0x01, 0xf7], 12);
 };
 
+PioneerDDJ400.focusedFxGroup = function() {
+    var focusedFx = engine.getValue("[EffectRack1_EffectUnit1]", "focused_effect");
+    focusedFx=1;
+    return "[EffectRack1_EffectUnit1_Effect" + focusedFx + "]";
+};
+
 //
 // Channel level lights
 //
@@ -291,7 +297,6 @@ PioneerDDJ400.beatFxSelectPressed = function(_channel, _control, value) {
 
 PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-
     var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxGroup(), "enabled");
     engine.setValue("[EffectRack1_EffectUnit1_Effect1]", "enabled", toggleEnabled);
      engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "enabled", toggleEnabled);

@@ -1957,7 +1957,7 @@
             </control>
             <control>
                 <group>[EffectRack1_EffectUnit1]</group>
-                <key>PioneerDDJ400.beatFxSelectPreviousEffect</key>
+                <key>PioneerDDJ400.beatFxLeftShiftPressed</key>
                 <description>BEAT LEFT + shift - select previous effect for the current unit</description>
                 <status>0x94</status>
                 <midino>0x66</midino>
@@ -2071,7 +2071,7 @@
             </control>
             <control>
                 <group>[EffectRack1_EffectUnit1]</group>
-                <key>PioneerDDJ400.beatFxSelectNextEffect</key>
+                <key>PioneerDDJ400.beatFxRightShiftPressed</key>
                 <description>BEAT RIGHT + shift - select next effect for the current unit</description>
                 <status>0x94</status>
                 <midino>0x6B</midino>
