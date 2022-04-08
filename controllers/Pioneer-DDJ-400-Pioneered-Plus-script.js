@@ -664,6 +664,87 @@ PioneerDDJ400.keyShift4Semi = function(_channel, control, value, _status, group)
 };
 
 
+PioneerDDJ400.beatloop1 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_0.03125_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_0.03125_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop2 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_0.0625_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_0.0625_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop3 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_0.125_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_0.125_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop4 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_0.25_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_0.25_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop5 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_0.5_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_0.5_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop6 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_1_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_1_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop7 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_2_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_2_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.beatloop8 = function(_channel, control, value, _status, group) {
+	if(value) {
+		engine.setValue(group,"beatlooproll_4_activate",1);
+		midi.sendShortMsg(_status,control,value);
+	} else {
+		engine.setValue(group,"beatlooproll_4_activate",0);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+
 PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
     var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxroup(), "enabled");
