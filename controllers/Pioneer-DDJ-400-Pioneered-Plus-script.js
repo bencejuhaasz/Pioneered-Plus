@@ -16,15 +16,11 @@
 //      * Beat Loop Mode
 //      * Beat Jump Mode
 //      * Sampler Mode
+//	* PADFX1
+//	* BeatFX
+//	* KeyShift
 //
 //  Custom (Mixxx specific mappings):
-//      * BeatFX: Assigned Effect Unit 1
-//                < LEFT Change left color fx
-//                > RIGHT Change left color fx
-//                SHIFT+ < LEFT Change right color fx
-//                SHIFT+ > RIGHT Change right color fx
-//                ON/OFF toggles beat fx
-//                v changes beat fx
 //
 //      * 32 beat jump forward & back (Shift + </> CUE/LOOP CALL arrows)
 //      * Toggle quantize (Shift + channel cue)
@@ -38,9 +34,9 @@
 //
 //      * Secondary pad modes (trial attempts complex and too experimental)
 //        * Keyboard mode
-//        * Pad FX1
+//       
 //        * Pad FX2
-//        * Keyshift mode
+//
 
 var PioneerDDJ400 = {};
 
@@ -594,6 +590,77 @@ PioneerDDJ400.PADFX8 = function(_channel, control, value, _status, group) {
                         }
 	}
 
+};
+
+PioneerDDJ400.keyShiftPADLightsOff = function(status) {
+		for(var i = 0; i <8;i++) {
+			midi.sendShortMsg(status, 0x70+i, 0x00);
+		}
+};
+
+PioneerDDJ400.keyShiftDefault = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", engine.getValue(group,"file_key"));
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift1Semi = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+1)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+
+PioneerDDJ400.keyShift1Full = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+2)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift2Semi = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+3)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift2Full = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+4)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift3Semi = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+5)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift3Full = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+6)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
+};
+
+PioneerDDJ400.keyShift4Semi = function(_channel, control, value, _status, group) {
+	if(value) {
+		PioneerDDJ400.keyShiftPADLightsOff(_status);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+7)%24);
+		midi.sendShortMsg(_status,control,value);
+	}
 };
 
 
