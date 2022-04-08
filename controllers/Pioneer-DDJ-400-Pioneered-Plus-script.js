@@ -316,7 +316,11 @@ PioneerDDJ400.PADFX1 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
-			midi.sendShortMsg(0x97, 0x10, 0x7F);
+			if(group.includes("Channel1")) {
+				midi.sendShortMsg(0x97, 0x10, 0x7F);
+			} else {
+				midi.sendShortMsg(0x99, 0x10, 0x7F);
+			}
 		}
 	} else {
 		var unit = padfx1_unit;
@@ -324,7 +328,11 @@ PioneerDDJ400.PADFX1 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
-		midi.sendShortMsg(0x97, 0x10, 0x00);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x10, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x10, 0x00);
+                        }
 	}
 
 };
@@ -345,6 +353,11 @@ PioneerDDJ400.PADFX2 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x11, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x11, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx2_unit;
@@ -352,6 +365,11 @@ PioneerDDJ400.PADFX2 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x11, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x11, 0x00);
+                        }
 	}
 
 };
@@ -372,6 +390,11 @@ PioneerDDJ400.PADFX3 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x12, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x12, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx3_unit;
@@ -379,6 +402,11 @@ PioneerDDJ400.PADFX3 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x12, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x12, 0x00);
+                        }
 	}
 
 };
@@ -398,6 +426,11 @@ PioneerDDJ400.PADFX4 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x13, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x13, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx4_unit;
@@ -405,6 +438,11 @@ PioneerDDJ400.PADFX4 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x13, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x13, 0x00);
+                        }
 	}
 
 };
@@ -425,6 +463,11 @@ PioneerDDJ400.PADFX5 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x14, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x14, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx5_unit;
@@ -432,6 +475,11 @@ PioneerDDJ400.PADFX5 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x14, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x14, 0x00);
+                        }
 	}
 
 };
@@ -452,13 +500,24 @@ PioneerDDJ400.PADFX6 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
-		}
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x15, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x15, 0x7F);
+                        }
+
+			}
 	} else {
 		var unit = padfx6_unit;
 		used_padfx_racks--;
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x15, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x15, 0x00);
+                        }
 	}
 
 };
@@ -479,6 +538,11 @@ PioneerDDJ400.PADFX7 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x16, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x16, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx7_unit;
@@ -486,6 +550,11 @@ PioneerDDJ400.PADFX7 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x16, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x16, 0x00);
+                        }
 	}
 
 };
@@ -506,6 +575,11 @@ PioneerDDJ400.PADFX8 = function(_channel, control, value, _status, group) {
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.7);
+			if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x17, 0x7F);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x17, 0x7F);
+                        }
 		}
 	} else {
 		var unit = padfx8_unit;
@@ -513,6 +587,11 @@ PioneerDDJ400.PADFX8 = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
+		if(group.includes("Channel1")) {
+                                midi.sendShortMsg(0x97, 0x17, 0x00);
+                        } else {
+                                midi.sendShortMsg(0x99, 0x17, 0x00);
+                        }
 	}
 
 };
