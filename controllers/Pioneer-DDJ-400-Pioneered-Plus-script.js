@@ -17,6 +17,7 @@
 //      * Beat Jump Mode
 //      * Sampler Mode
 //	* PADFX1
+//	* PADFX2 (Beatlooproll)
 //	* BeatFX
 //	* KeyShift
 //
@@ -35,7 +36,7 @@
 //      * Secondary pad modes (trial attempts complex and too experimental)
 //        * Keyboard mode
 //       
-//        * Pad FX2
+//
 //
 
 var PioneerDDJ400 = {};
@@ -151,6 +152,9 @@ PioneerDDJ400.toggleLight = function(midiIn, active) {
 //
 // Init
 //
+
+var keyboard_on=false;
+var keyboard_hc=0;
 
 var used_padfx_racks=0;
 
@@ -598,6 +602,11 @@ PioneerDDJ400.keyShiftPADLightsOff = function(status) {
 		}
 };
 
+PioneerDDJ400.keyShiftModeOn = function(_channel, control, value, _status, group) {
+	midi.sendShortMsg(0x97,0x74,1);
+	midi.sendShortMsg(0x99,0x74,1);
+};
+
 PioneerDDJ400.keyShiftDefault = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
@@ -663,6 +672,204 @@ PioneerDDJ400.keyShift7 = function(_channel, control, value, _status, group) {
 	}
 };
 
+PioneerDDJ400.keyboardOff = function(_channel, control, value, _status, group) {
+	if(control-0x40==(keyboard_hc-1)) {
+		keyboard_on=false;
+		keyboard_hc=0;
+		PioneerDDJ400.stopSamplerBlink(_channel,control,group);
+		for(var i = 1; i <=8; i++) {
+			midi.sendShortMsg((_status-1),0x40+i-1,0x00);
+			if(engine.getValue(group,"hotcue_"+i+"_enabled")) {
+                        midi.sendShortMsg((_status-1),0x40+i-1,0x7F);
+                        }
+		}
+	}
+
+};
+
+PioneerDDJ400.keyboardOn = function(_channel, control, value, _status, group) {
+	for(var i = 1; i <=8; i++) {
+		if(_status==0x90) {
+			midi.sendShortMsg(0x97,0x40+i-1,0x00);
+			if(engine.getValue(group,"hotcue_"+i+"_enabled")) {
+                        	midi.sendShortMsg(0x97,0x40+i-1,0x7F);
+                	}
+		} else if(_status==0x91) {
+			if(engine.getValue(group,"hotcue_"+i+"_enabled")) {
+                        	midi.sendShortMsg(0x99,0x40+i-1,0x7F);
+                	}
+		}
+	}
+};
+
+PioneerDDJ400.keyboard1 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+1)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard2 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+2)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard3 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+3)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+
+PioneerDDJ400.keyboard4 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+4)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard5 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+5)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard6 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+6)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard7 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+7)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
+
+PioneerDDJ400.keyboard8 = function(_channel, control, value, _status, group) {
+	if(!value) {
+		engine.setValue(group,"key",(engine.getValue(group,"file_key")));
+		engine.setValue(group,"play",0);
+		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
+	} else {
+		if(keyboard_on) {
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+8)%24);
+			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
+		} else {
+			keyboard_hc=1;
+			keyboard_on=true;
+			for (var i = 1; i <=8; i++) {
+				midi.sendShortMsg(_status,0x40+i-1,0x00);
+			}
+			midi.sendShortMsg(_status,control,0x7F);
+		}
+
+	}
+};
 
 PioneerDDJ400.beatloop1 = function(_channel, control, value, _status, group) {
 	if(value) {
@@ -1078,6 +1285,7 @@ PioneerDDJ400.startSamplerBlink = function(channel, control, group) {
         }
     });
 };
+
 
 PioneerDDJ400.stopSamplerBlink = function(channel, control) {
     PioneerDDJ400.timers[channel] = PioneerDDJ400.timers[channel] || {};
