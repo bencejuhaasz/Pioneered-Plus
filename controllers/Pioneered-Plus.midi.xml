@@ -1867,17 +1867,7 @@
             </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift1Semi</key>
-                <description>keyshift</description>
-                <status>0x97</status>
-                <midino>0x70</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift1Full</key>
+                <key>PioneerDDJ400.keyShift1</key>
                 <description>keyshift</description>
                 <status>0x97</status>
                 <midino>0x75</midino>
@@ -1885,19 +1875,9 @@
                     <script-binding/>
                 </options>
             </control>
-	    <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift2Semi</key>
-                <description>keyshift</description>
-                <status>0x97</status>
-                <midino>0x71</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift2Full</key>
+                <key>PioneerDDJ400.keyShift2</key>
                 <description>keyshift</description>
                 <status>0x97</status>
                 <midino>0x76</midino>
@@ -1907,17 +1887,7 @@
             </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift3Semi</key>
-                <description>keyshift</description>
-                <status>0x97</status>
-                <midino>0x72</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-	    <control>
-                <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift3Full</key>
+                <key>PioneerDDJ400.keyShift3</key>
                 <description>keyshift</description>
                 <status>0x97</status>
                 <midino>0x77</midino>
@@ -1925,12 +1895,42 @@
                     <script-binding/>
                 </options>
             </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.keyShift4</key>
+                <description>keyshift</description>
+                <status>0x97</status>
+                <midino>0x70</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.keyShift4Semi</key>
+                <key>PioneerDDJ400.keyShift5</key>
+                <description>keyshift</description>
+                <status>0x97</status>
+                <midino>0x71</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.keyShift6</key>
                 <description>keyshift</description>
                 <status>0x97</status>
                 <midino>0x73</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel1]</group>
+                <key>PioneerDDJ400.keyShift7</key>
+                <description>keyshift</description>
+                <status>0x97</status>
+                <midino>0x74</midino>
                 <options>
                     <script-binding/>
                 </options>
@@ -1947,17 +1947,7 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift1Semi</key>
-                <description>keyshift</description>
-                <status>0x99</status>
-                <midino>0x70</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift1Full</key>
+                <key>PioneerDDJ400.keyShift1</key>
                 <description>keyshift</description>
                 <status>0x99</status>
                 <midino>0x75</midino>
@@ -1965,19 +1955,9 @@
                     <script-binding/>
                 </options>
             </control>
-	    <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift2Semi</key>
-                <description>keyshift</description>
-                <status>0x99</status>
-                <midino>0x71</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift2Full</key>
+                <key>PioneerDDJ400.keyShift2</key>
                 <description>keyshift</description>
                 <status>0x99</status>
                 <midino>0x76</midino>
@@ -1987,7 +1967,37 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift3Semi</key>
+                <key>PioneerDDJ400.keyShift3</key>
+                <description>keyshift</description>
+                <status>0x99</status>
+                <midino>0x77</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>PioneerDDJ400.keyShift4</key>
+                <description>keyshift</description>
+                <status>0x99</status>
+                <midino>0x70</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel2]</group>
+                <key>PioneerDDJ400.keyShift5</key>
+                <description>keyshift</description>
+                <status>0x99</status>
+                <midino>0x71</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+	    <control>
+                <group>[Channel2]</group>
+                <key>PioneerDDJ400.keyShift6</key>
                 <description>keyshift</description>
                 <status>0x99</status>
                 <midino>0x72</midino>
@@ -1997,17 +2007,7 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift3Full</key>
-                <description>keyshift</description>
-                <status>0x99</status>
-                <midino>0x77</midino>
-                <options>
-                    <script-binding/>
-                </options>
-            </control>
-	    <control>
-                <group>[Channel2]</group>
-                <key>PioneerDDJ400.keyShift4Semi</key>
+                <key>PioneerDDJ400.keyShift7</key>
                 <description>keyshift</description>
                 <status>0x99</status>
                 <midino>0x73</midino>

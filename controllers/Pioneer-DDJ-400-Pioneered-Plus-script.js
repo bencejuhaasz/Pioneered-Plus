@@ -606,7 +606,7 @@ PioneerDDJ400.keyShiftDefault = function(_channel, control, value, _status, grou
 	}
 };
 
-PioneerDDJ400.keyShift1Semi = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift1 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+1)%24);
@@ -615,7 +615,7 @@ PioneerDDJ400.keyShift1Semi = function(_channel, control, value, _status, group)
 };
 
 
-PioneerDDJ400.keyShift1Full = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift2 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+2)%24);
@@ -623,7 +623,7 @@ PioneerDDJ400.keyShift1Full = function(_channel, control, value, _status, group)
 	}
 };
 
-PioneerDDJ400.keyShift2Semi = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift3 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+3)%24);
@@ -631,7 +631,7 @@ PioneerDDJ400.keyShift2Semi = function(_channel, control, value, _status, group)
 	}
 };
 
-PioneerDDJ400.keyShift2Full = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift4 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+4)%24);
@@ -639,7 +639,7 @@ PioneerDDJ400.keyShift2Full = function(_channel, control, value, _status, group)
 	}
 };
 
-PioneerDDJ400.keyShift3Semi = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift5 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+5)%24);
@@ -647,7 +647,7 @@ PioneerDDJ400.keyShift3Semi = function(_channel, control, value, _status, group)
 	}
 };
 
-PioneerDDJ400.keyShift3Full = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift6 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+6)%24);
@@ -655,7 +655,7 @@ PioneerDDJ400.keyShift3Full = function(_channel, control, value, _status, group)
 	}
 };
 
-PioneerDDJ400.keyShift4Semi = function(_channel, control, value, _status, group) {
+PioneerDDJ400.keyShift7 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
 		engine.setValue(group, "key", (engine.getValue(group,"file_key")+7)%24);
