@@ -246,7 +246,7 @@ PioneerDDJ400.beatFxSelectPreviousEffect = function(_channel, _control, value) {
      if (value === 0) { return; }
      if(true) {
         engine.setValue("[EffectRack1_EffectUnit1]","prev_chain", 1);
-        presscount_b-=1;
+        //presscount_b-=1;
      }
 };
 
@@ -254,7 +254,7 @@ PioneerDDJ400.beatFxSelectNextEffect = function(_channel, _control, value) {
      if (value === 0) { return; }
      if(true) {
       engine.setValue("[EffectRack1_EffectUnit1]","next_chain", 1);
-      presscount_b+=1;
+      //presscount_b+=1;
      }
 };
 
@@ -262,7 +262,7 @@ PioneerDDJ400.beatFxLeftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
     if(true) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","prev_chain", 1);
-      presscount_l-=1;
+      //presscount_l-=1;
     }
 };
 
@@ -270,7 +270,7 @@ PioneerDDJ400.beatFxLeftShiftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
     if(true) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","prev_chain", 1);
-      presscount_r-=1;
+      //presscount_r-=1;
     }
 };
 
@@ -278,7 +278,7 @@ PioneerDDJ400.beatFxRightPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
     if(true) {
       engine.setValue("[QuickEffectRack1_[Channel1]]","next_chain", 1);
-      presscount_l+=1;
+      //presscount_l+=1;
     }
 };
 
@@ -286,7 +286,7 @@ PioneerDDJ400.beatFxRightShiftPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
     if(true) {
       engine.setValue("[QuickEffectRack1_[Channel2]]","next_chain", 1);
-      presscount_r+=1;
+      //presscount_r+=1;
     }
 };
 
