@@ -955,7 +955,7 @@ PioneerDDJ400.beatloop8 = function(_channel, control, value, _status, group) {
 
 PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
     if (value === 0) { return; }
-    var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxroup(), "enabled");
+    var toggleEnabled = !engine.getValue(PioneerDDJ400.focusedFxGroup(), "enabled");
     engine.setValue("[EffectRack1_EffectUnit1_Effect1]", "enabled", toggleEnabled);
      engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "enabled", toggleEnabled);
  engine.setValue("[EffectRack1_EffectUnit1_Effect3]", "enabled", toggleEnabled);
