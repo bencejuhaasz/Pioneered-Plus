@@ -12,7 +12,7 @@
                 </Connection>
 <PushButton>
         <ObjectName>EffectToggle</ObjectName>
-        <Size>0me,25max</Size>
+        <Size>0me,100max</Size>
         <NumberStates>2</NumberStates>
         <State>
           <Number>0</Number>
@@ -34,8 +34,63 @@
           <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],meta</ConfigKey>
           <ConnectValueToWidget>false</ConnectValueToWidget>
         </Connection>
+</PushButton>
+<WidgetGroup>
+    <Layout>horizontal</Layout>
+     <Children>
+<PushButton>
+        <ObjectName>LOW</ObjectName>
+        <Size>0me,100max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>LOW</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>LOW</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter1</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
       </PushButton>
-
+<PushButton>
+        <ObjectName>MID</ObjectName>
+        <Size>0me,100max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>MID</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>MID</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter2</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
+      </PushButton>
+<PushButton>
+        <ObjectName>HI</ObjectName>
+        <Size>0me,100max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>HI</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>HI</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter3</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
+      </PushButton>
+</Children>
+  </WidgetGroup>
     </Children>
   </WidgetGroup>
 </Template>
