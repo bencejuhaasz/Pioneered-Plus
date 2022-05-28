@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Reverb</Name>
+ <Name>B_Echo_g</Name>
  <MixMode>DRY+WET</MixMode>
  <SuperParameterValue>0</SuperParameterValue>
  <Effects>
@@ -11,21 +11,21 @@
    <Parameters>
     <Parameter>
      <Id>low</Id>
-     <Value>1.43612</Value>
+     <Value>1.41808</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>mid</Id>
-     <Value>1.55297</Value>
+     <Value>1.46233</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>high</Id>
-     <Value>1.41816</Value>
+     <Value>1.48693</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
@@ -55,25 +55,25 @@
   </Effect>
   <Effect>
    <MetaParameterValue>0</MetaParameterValue>
-   <Id>org.mixxx.effects.reverb</Id>
+   <Id>org.mixxx.effects.echo</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
-     <Id>decay</Id>
+     <Id>delay_time</Id>
      <Value>0.5</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>bandwidth</Id>
-     <Value>1</Value>
+     <Id>feedback_amount</Id>
+     <Value>0.707946</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>damping</Id>
+     <Id>pingpong_amount</Id>
      <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
@@ -83,6 +83,20 @@
      <Id>send_amount</Id>
      <Value>0</Value>
      <LinkType>LINKED</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>quantize</Id>
+     <Value>1</Value>
+     <LinkType>NONE</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>triplet</Id>
+     <Value>0</Value>
+     <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
