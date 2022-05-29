@@ -12,7 +12,7 @@
                 </Connection>
 <PushButton>
         <ObjectName>EffectToggle</ObjectName>
-        <Size>0me,100max</Size>
+        <Size>0me,50max</Size>
         <NumberStates>2</NumberStates>
         <State>
           <Number>0</Number>
