@@ -23,7 +23,7 @@
           <Text>Active</Text>
         </State>
         <Connection>
-          <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],enabled</ConfigKey>
+          <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect2],enabled</ConfigKey>
           <ConnectValueToWidget>true</ConnectValueToWidget>
         </Connection>
         <Connection>
