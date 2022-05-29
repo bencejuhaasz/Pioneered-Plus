@@ -202,10 +202,10 @@ PioneerDDJ400.init = function() {
     engine.makeConnection("[Channel1]", "loop_enabled", PioneerDDJ400.loopToggle);
     engine.makeConnection("[Channel2]", "loop_enabled", PioneerDDJ400.loopToggle);
 
-    for (i = 1; i <= 3; i++) {
+    for (i = 2; i <= 3; i++) {
         engine.makeConnection("[EffectRack1_EffectUnit1_Effect" + i +"]", "enabled", PioneerDDJ400.toggleFxLight);
     }
-    engine.makeConnection("[EffectRack1_EffectUnit1]", "focused_effect", PioneerDDJ400.toggleFxLight);
+    //engine.makeConnection("[EffectRack1_EffectUnit1]", "focused_effect", PioneerDDJ400.toggleFxLight);
 
     // query the controller for current control positions on startup
     midi.sendSysexMsg([0xF0, 0x00, 0x40, 0x05, 0x00, 0x00, 0x02, 0x06, 0x00, 0x03, 0x01, 0xf7], 12);
