@@ -169,7 +169,7 @@ var padfx8_unit=0;
 
 PioneerDDJ400.init = function() {
     engine.setValue("[EffectRack1_EffectUnit1]", "show_focus", 1);
-    engine.setParameter("[EffectRack1_EffectUnit1]", "mix", 1);
+    //engine.setParameter("[EffectRack1_EffectUnit1]", "mix", 1);
     engine.setValue("[EffectRack1_EffectUnit1_Effect1]", "enabled", 1);
     engine.makeUnbufferedConnection("[Channel1]", "VuMeter", PioneerDDJ400.vuMeterUpdate);
     engine.makeUnbufferedConnection("[Channel2]", "VuMeter", PioneerDDJ400.vuMeterUpdate);
@@ -980,6 +980,11 @@ PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
     engine.setValue("[EffectRack1_EffectUnit1_Effect1]", "enabled", 1);
      engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "enabled", toggleEnabled);
  engine.setValue("[EffectRack1_EffectUnit1_Effect3]", "enabled", toggleEnabled);
+};
+
+PioneerDDJ400.BeatFxRotate = function(_channel, _control, value) {
+    engine.setValue("[EffectRack1_EffectUnit1]", "super1", value/128);
+    engine.setValue("[EffectRack1_EffectUnit1]", "mix", value/128);
 };
 
 

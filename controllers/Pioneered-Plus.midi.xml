@@ -153,12 +153,12 @@
             </control>
             <control>
                 <group>[EffectRack1_EffectUnit1]</group>
-                <key>super1</key>
+                <key>PioneerDDJ400.BeatFxRotate</key>
                 <description>BEAT FX LEVEL - rotate to set</description>
                 <status>0xB4</status>
                 <midino>0x02</midino>
                 <options>
-                    <fourteen-bit-msb/>
+                    <script-binding/>
                 </options>
             </control>
             <control>
