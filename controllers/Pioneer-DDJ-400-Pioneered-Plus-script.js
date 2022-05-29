@@ -213,7 +213,7 @@ PioneerDDJ400.init = function() {
 
 PioneerDDJ400.focusedFxGroup = function() {
     var focusedFx = engine.getValue("[EffectRack1_EffectUnit1]", "focused_effect");
-    focusedFx=1;
+    focusedFx=2;
     return "[EffectRack1_EffectUnit1_Effect" + focusedFx + "]";
 };
 
