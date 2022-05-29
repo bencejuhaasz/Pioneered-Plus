@@ -987,6 +987,17 @@ PioneerDDJ400.BeatFxRotate = function(_channel, _control, value) {
     engine.setValue("[EffectRack1_EffectUnit1]", "mix", value/128);
 };
 
+PioneerDDJ400.BeatFxPARAMRotate = function(_channel, _control, value) {
+    if(value === 0x01) {
+    	engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "parameter1_down_small", 1);
+    }
+    
+    if(value === 0x7F) {
+       engine.setValue("[EffectRack1_EffectUnit1_Effect2]", "parameter1_up_small", 1);
+    }
+    
+};
+
 
 PioneerDDJ400.beatFxChannel = function(_channel, control, value, _status, group) {
     if (value === 0x00) { return; }

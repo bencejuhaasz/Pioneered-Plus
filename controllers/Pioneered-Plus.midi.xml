@@ -162,6 +162,16 @@
                 </options>
             </control>
             <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>PioneerDDJ400.BeatFxPARAMRotate</key>
+                <description>BEAT FX PARAMETER - rotate to set</description>
+                <status>0xB6</status>
+                <midino>0x64</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
                 <group>[Channel1]</group>
                 <key>hotcue_4_activate</key>
                 <description>PAD 4 (DECK1) HOT CUE MODE - press - set hotcue</description>
