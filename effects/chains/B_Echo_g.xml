@@ -6,26 +6,26 @@
  <Effects>
   <Effect>
    <MetaParameterValue>0</MetaParameterValue>
-   <Id>org.mixxx.effects.linkwitzrileyeq</Id>
+   <Id>org.mixxx.effects.threebandbiquadeq</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
      <Id>low</Id>
-     <Value>1.41808</Value>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>mid</Id>
-     <Value>1.46233</Value>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>high</Id>
-     <Value>1.48693</Value>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
