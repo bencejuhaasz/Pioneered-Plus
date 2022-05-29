@@ -1,0 +1,418 @@
+/* Pioneer Colours:
+
+Play button: #6ee128
+Cue button: #eb870f
+Slip button: #d73535
+Tabs on top: #c3d541
+Headers: #32323c
+Title bg: #112f5c
+Blue: #2d85cd
+White: #e5e6ea
+
+*/
+
+/* DEBUG
+* {
+  border: 1px solid rgba(255,255,255,0.1);
+}
+/* END */
+
+#Mixxx {
+  background-color: black;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+QMenuBar, QMenuBar::item, QMenu, QMenu::item {
+  background-color: black;
+  color: gray;
+}
+
+QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/************************************************************************/
+/*     Buttons                                                          */
+/************************************************************************/
+
+WPushButton {
+  color: #e5e6ea;
+  background-color: transparent;
+  border: 1px solid #32323c;
+  border-radius: 2px;
+  outline: none;
+}
+
+WPushButton:hover {
+  border: 1px solid #5F5F5F;
+}
+
+WPushButton[value="1"] {
+  color: #e5e6ea;
+  border: 1px solid #5F5F5F;
+  background-color: #32323c;
+}
+
+WPushButton[value="1"]:hover {
+  border: 1px solid #4B4B4B;
+  background-color: #30303a;
+}
+
+/************************************************************************/
+/*     Deck                                                             */
+/************************************************************************/
+
+
+#Deck {
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+#Deck[highlight="1"] {
+  border: 1px solid #e5e6ea;
+}
+
+#DeckBPMWrapper {
+  border: 2px solid #e5e6ea;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  padding-right: 2px;
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+}
+
+#DeckBPM {
+  font-size: 20px;
+}
+
+#DeckBPMTitleWrapper {
+  padding: 0 2px;
+  qproperty-layoutAlignment: 'AlignRight | AlignVCenter';
+}
+
+#DeckBPMTitle {
+  font-size: 8px;
+  font-weight: bold;
+}
+
+#TrackBPMRangeContainer {
+  padding: 5px;
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
+
+#DeckBPMRangePercent {
+  background-color: #222222;
+  padding: 0px;
+}
+
+#BPMRangePlusMinus, #RateDisplay {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#DeckHeader {
+  background-color: #112f5c;
+  padding: 2px;
+}
+
+#DeckOverview {
+  margin: 50% 0;
+}
+
+#DeckTitle, #DeckTitleNote {
+  font-size: 20px;
+}
+
+#DeckTitleNote {
+  margin: 0 2px;
+}
+
+#DeckChannelTitle, #DeckTrackTimeTitle, #DeckTempoTitle {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#DeckPlayingLeft, #DeckPlayingRight {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#DeckTrackTimeWrapper {
+  qproperty-layoutAlignment: 'AlignLeft | AlignVCenter';
+}
+
+#DeckTrackTime {
+  font-size: 36px;
+}
+
+#DeckTrackTime[highlight="1"] {
+  color: transparent;
+}
+
+#DeckTrackTimeMini {
+  font-size: 20px;
+}
+
+#DeckTrackTimeMini[highlight="1"] {
+  color: transparent;
+}
+
+#DeckTrackNumberContainer {
+  margin: 0 4px;
+  qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
+}
+
+/************************************************************************/
+/*     Effects                                                          */
+/************************************************************************/
+
+WEffectChainPresetSelector {
+  background-color: transparent;
+  color: #2d85cd;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+#EffectToggle {
+  color: gray;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#EffectToggle[value="1"] {
+  color: #2d85cd;
+}
+
+#TrackNumberWrapper, #DeckChannelTitleWrapper {
+  qproperty-layoutAlignment: 'AlignHCenter | AlignVCenter';
+}
+
+#TrackNumberTitle {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+#TrackNumber {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/************************************************************************/
+/*     Library                                                          */
+/************************************************************************/
+
+#LibraryWrapper QScrollBar {
+  background-color: gray;
+}
+
+#LibraryWrapper QScrollBar::handle:horizontal {
+  border: 0;
+}
+
+#LibraryWrapper QScrollBar:horizontal {
+  height: 0;
+  width: 0;
+}
+
+#LibraryWrapper QScrollBar:vertical {
+  border: 0;
+  width: 4px;
+}
+
+#LibraryWrapper QScrollBar::add-page,
+#LibraryWrapper QScrollBar::sub-page {
+  background-color: black;
+}
+
+#LibraryWrapper QScrollBar::add-line,
+#LibraryWrapper QScrollBar::sub-line {
+  height: 0;
+  width: 0;
+}
+
+#LibraryWrapper WTrackTableViewHeader::section {
+  background-color: #32323c;
+  color: #e5e6ea;
+  font-weight: bold;
+  margin: 2px;
+  text-transform: uppercase;
+}
+
+#LibraryWrapper QTableView,
+#LibraryWrapper WLibraryTextBrowser {
+  background-color: black;
+  alternate-background-color: #32323c;
+  selection-background-color: #e5e6ea;
+  color: white;
+  selection-color: black;
+}
+
+#LibraryWrapper WLibrarySidebar {
+  background-color: #32323c;
+  selection-background-color: #e5e6ea;
+  border-left: 4px solid gray;
+  color: #e5e6ea;
+  font-weight: bold;
+  selection-color: black;
+  text-transform: uppercase;
+}
+
+#LibraryWrapper QPushButton,
+#LibraryWrapper QSpinBox,
+#LibraryWrapper QComboBox,
+#LibraryWrapper QComboBox QAbstractScrollArea {
+  background-color: #32323c;
+  color: #e5e6ea;
+}
+
+WLabel {
+  color: #e5e6ea;
+}
+
+/* Library Search */
+#SearchBox {
+  background-color: #112f5c;
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+/************************************************************************/
+/*     BeatFX                                                           */
+/************************************************************************/
+
+#BeatFX_Container {
+  border: 2px solid #32323c;
+  margin-left: 10px;
+  qproperty-layoutAlignment: 'AlignCenter | AlignTop';
+}
+
+#BeatFX_Header {
+  background-color: #32323c;
+}
+
+#BeatFX_Title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#SidebarContainer {
+  background-color: #112f5c;
+}
+
+#SidebarButton {
+  background-color: rgba(0,0,0,0.2);
+  border: 2px solid lightgray;
+  border-radius: 4px;
+  color: lightgray;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px;
+}
+
+/************************************************************************/
+/*     Waveforms                                                        */
+/************************************************************************/
+
+#WaveformInfo {
+  margin-right: 10px;
+}
+
+#WaveformInfo_Header {
+  background-color: #32323c;
+  border-top-right-radius: 10px 25px;
+  padding-right: 2px;
+}
+
+#WaveformInfo_Header[highlight="1"] {
+  border: 2px solid #e5e6ea;
+}
+
+#WaveformInfo_Title,
+#WaveformInfo_Key,
+#WaveformInfo_Bars {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#WaveformInfo_Data_Container,
+#WaveformInfo_Key_Container,
+#WaveformInfo_Bars_Container {
+  qproperty-layoutAlignment: 'AlignLeft | AlignTop';
+}
+
+#WaveformInfo_Key_Icon {
+  background-color: #e5e6ea;
+  border-radius: 2px;
+  font-size: 14px;
+  margin: 4px;
+  padding: -6px -6px -3px -2px;
+}
+
+#WaveformInfo_KeylockButton {
+  image: url(skin:icons/keylock.svg) no-repeat center center;
+}
+
+#WaveformInfo_QuantizeButton {
+  image: url(skin:icons/quantize.svg) no-repeat center center;
+}
+
+/************************************************************************/
+/*     Tabs                                                             */
+/************************************************************************/
+
+#TabControls WPushButton {
+  background-color: black;
+  font-weight: bold;
+  margin: 10px 10%;
+  max-width: 250px;
+  text-transform: uppercase;
+}
+
+#TabControls WPushButton[value="0"] {
+  border: 2px solid gray;
+  color: gray;
+}
+
+#TabControls WPushButton[value="1"] {
+  border: 2px solid #c3d541;
+  color: #c3d541;
+}
+
+/************************************************************************/
+/*     Samplers                                                         */
+/************************************************************************/
+
+#Sampler {
+  background-color: #32323c;
+  border: 2px solid #d73535;
+  border-radius: 2px;
+  color: white;
+  font-size: 24px;
+  margin: 4px;
+  padding: 2px;
+}
+
+#Sampler[value="1"] {
+  background-color: #d73535;
+}
+
+#Sampler_Info {
+  color: white;
+  font-size: 10px;
+  margin: 4px;
+}
+
+#SamplersDeck1, #SamplersDeck2 {
+  margin: 0 4px;
+}

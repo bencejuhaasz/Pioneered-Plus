@@ -1,0 +1,188 @@
+<Template>
+  <WidgetGroup>
+    <ObjectName>Waveform_Channel<Variable name="channel"/></ObjectName>
+    <Layout>horizontal</Layout>
+    <Size>0me,50me</Size>
+    <Children>
+      <WidgetGroup>
+        <ObjectName>WaveformInfo</ObjectName>
+        <Layout>vertical</Layout>
+        <Size>100f,0me</Size>
+        <Children>
+          <WidgetGroup>
+            <ObjectName>WaveformInfo_Header</ObjectName>
+            <Layout>horizontal</Layout>
+            <Size>0me,30max</Size>
+            <Children>
+              <Label>
+                <ObjectName>WaveformInfo_Title</ObjectName>
+                <Text>Deck&#160;<Variable name="channel"/></Text>
+              </Label>
+            </Children>
+            <Connection>
+              <ConfigKey>[Channel<Variable name="channel"/>],play</ConfigKey>
+              <BindProperty>highlight</BindProperty>
+            </Connection>
+          </WidgetGroup>
+          <WidgetGroup>
+            <ObjectName>WaveformInfo_Data_Container</ObjectName>
+            <Layout>vertical</Layout>
+            <Size>0me,25me</Size>
+            <Children>
+              <WidgetGroup>
+                <ObjectName>WaveformInfo_Key_Container</ObjectName>
+                <Layout>horizontal</Layout>
+                <Size>0me,30f</Size>
+                <Children>
+                  <Label>
+                    <ObjectName>WaveformInfo_Key_Icon</ObjectName>
+                    <Text>&#9837;&#9839;</Text>
+                    <Style>color: black;</Style>
+                  </Label>
+                  <Key>
+                    <ObjectName>WaveformInfo_Key</ObjectName>
+                    <TooltipId>visual_key</TooltipId>
+                    <Connection>
+                      <ConfigKey>[Channel<Variable name="channel"/>],visual_key</ConfigKey>
+                    </Connection>
+                  </Key>
+                </Children>
+              </WidgetGroup>
+              <WidgetGroup>
+                <ObjectName>WaveformInfo_Bars_Container</ObjectName>
+                <Layout>horizontal</Layout>
+                <Size>0me,10f</Size>
+                <Children>
+                  <Label>
+                    <ObjectName>WaveformInfo_Bars</ObjectName>
+                  </Label>
+                </Children>
+              </WidgetGroup>
+
+              <WidgetGroup>
+                <ObjectName>WaveformInfo_Controls</ObjectName>
+                <Layout>horizontal</Layout>
+                <Size>0me,30f</Size>
+                <Children>
+
+                  <Template src="skin:templates/toggle_button.xml">
+                    <SetVariable name="TooltipId">quantize</SetVariable>
+                    <SetVariable name="ObjectName">WaveformInfo_QuantizeButton</SetVariable>
+                    <SetVariable name="Size">30me,30f</SetVariable>
+                    <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],quantize</SetVariable>
+                  </Template>
+
+                  <Template src="skin:templates/toggle_button.xml">
+                    <SetVariable name="TooltipId">keylock</SetVariable>
+                    <SetVariable name="ObjectName">WaveformInfo_KeylockButton</SetVariable>
+                    <SetVariable name="Size">30me,30f</SetVariable>
+                    <SetVariable name="LeftConnectionControl">[Channel<Variable name="channel"/>],keylock</SetVariable>
+                  </Template>
+
+                </Children>
+              </WidgetGroup>
+            </Children>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+      <Visual>
+        <TooltipId>waveform_display</TooltipId>
+        <ObjectName>Waveform<Variable name="channel"/></ObjectName>
+        <Channel><Variable name="channel"/></Channel>
+        <BgColor>#000</BgColor>
+        <BeatColor>#40ffffff</BeatColor>
+        <PlayPosColor>#fff</PlayPosColor>
+        <SignalColor>#32323c</SignalColor>
+        <SignalLowColor>#007de1</SignalLowColor>
+        <SignalMidColor>#007de1</SignalMidColor>
+        <SignalHighColor>#007de1</SignalHighColor>
+	<DefaultMark>
+          <Align>bottom|right</Align>
+          <Color>#FF0000</Color>
+          <TextColor>#FFFFFF</TextColor>
+         <Text> %1 </Text>
+        </DefaultMark>
+        <Mark>
+          <Control>cue_point</Control>
+          <Text>CUE</Text>
+          <Color>#ff6000</Color>
+          <TextColor>#ff6000</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_1_position</Control>
+	  <Text></Text>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_2_position</Control>
+	  <Text></Text>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_3_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_4_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_5_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_6_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_7_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>hotcue_8_position</Control>
+          <Color>#ff6000</Color>
+          <TextColor>#00ff00</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>loop_start_position</Control>
+          <Text>LOOP IN</Text>
+          <Color>#6ee128</Color>
+          <TextColor>#6ee128</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <Mark>
+          <Control>loop_end_position</Control>
+          <Text>LOOP OUT</Text>
+          <Color>#6ee128</Color>
+          <TextColor>#6ee128</TextColor>
+          <Align>bottom</Align>
+        </Mark>
+        <MarkRange>
+          <StartControl>loop_start_position</StartControl>
+          <EndControl>loop_end_position</EndControl>
+          <EnabledControl>loop_enabled</EnabledControl>
+          <Color>#6ee128</Color>
+          <Opacity>0.8</Opacity>
+          <DisabledColor>#acacac</DisabledColor>
+          <DisabledOpacity>0.4</DisabledOpacity>
+        </MarkRange>
+      </Visual>
+    </Children>
+  </WidgetGroup>
+</Template>
