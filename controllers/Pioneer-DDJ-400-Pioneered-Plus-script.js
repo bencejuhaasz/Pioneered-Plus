@@ -982,6 +982,16 @@ PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
  engine.setValue("[EffectRack1_EffectUnit1_Effect3]", "enabled", toggleEnabled);
 };
 
+
+
+
+PioneerDDJ400.ReleaseFX = function(_channel, _control, value) {
+    if (value===0x7F) {
+       engine.brake(deck, true,10);
+    } else {
+    	engine.brake(deck, false);
+    }
+
 PioneerDDJ400.BeatFxRotate = function(_channel, _control, value) {
     engine.setValue("[EffectRack1_EffectUnit1]", "super1", value/128);
     engine.setValue("[EffectRack1_EffectUnit1]", "mix", value/128);
