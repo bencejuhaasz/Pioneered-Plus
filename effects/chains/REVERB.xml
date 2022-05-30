@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Pingpong_g</Name>
+ <Name>REVERB</Name>
  <MixMode>DRY+WET</MixMode>
  <SuperParameterValue>0</SuperParameterValue>
  <Effects>
@@ -55,25 +55,25 @@
   </Effect>
   <Effect>
    <MetaParameterValue>0</MetaParameterValue>
-   <Id>org.mixxx.effects.echo</Id>
+   <Id>org.mixxx.effects.reverb</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
-     <Id>delay_time</Id>
+     <Id>decay</Id>
      <Value>0.5</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>feedback_amount</Id>
-     <Value>0.707946</Value>
+     <Id>bandwidth</Id>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>pingpong_amount</Id>
+     <Id>damping</Id>
      <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
@@ -83,20 +83,6 @@
      <Id>send_amount</Id>
      <Value>0</Value>
      <LinkType>LINKED</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>quantize</Id>
-     <Value>1</Value>
-     <LinkType>NONE</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>triplet</Id>
-     <Value>0</Value>
-     <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>

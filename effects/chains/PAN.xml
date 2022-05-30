@@ -1,51 +1,51 @@
 <?xml version='1.0' encoding='utf-8'?>
 <EffectChain>
- <Name>B_Echo_g</Name>
- <MixMode>DRY/WET</MixMode>
+ <Name>PAN</Name>
+ <MixMode>DRY+WET</MixMode>
  <SuperParameterValue>0</SuperParameterValue>
  <Effects>
   <Effect>
    <MetaParameterValue>0</MetaParameterValue>
-   <Id>org.mixxx.effects.echo</Id>
+   <Id>org.mixxx.effects.threebandbiquadeq</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
-     <Id>delay_time</Id>
-     <Value>0.5</Value>
-     <LinkType>NONE</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>feedback_amount</Id>
-     <Value>0.707946</Value>
-     <LinkType>NONE</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>pingpong_amount</Id>
-     <Value>0</Value>
-     <LinkType>NONE</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>send_amount</Id>
-     <Value>0</Value>
-     <LinkType>LINKED</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>quantize</Id>
+     <Id>low</Id>
      <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>triplet</Id>
+     <Id>mid</Id>
+     <Value>1</Value>
+     <LinkType>NONE</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>high</Id>
+     <Value>1</Value>
+     <LinkType>NONE</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>killLow</Id>
+     <Value>0</Value>
+     <LinkType>NONE</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>killMid</Id>
+     <Value>0</Value>
+     <LinkType>NONE</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>killHigh</Id>
      <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
@@ -53,7 +53,34 @@
     </Parameter>
    </Parameters>
   </Effect>
-  <Effect/>
+  <Effect>
+   <MetaParameterValue>0</MetaParameterValue>
+   <Id>org.mixxx.effects.autopan</Id>
+   <BackendType>Built-In</BackendType>
+   <Parameters>
+    <Parameter>
+     <Id>period</Id>
+     <Value>4</Value>
+     <LinkType>LINKED</LinkType>
+     <LinkInversion>1</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>smoothing</Id>
+     <Value>0.25</Value>
+     <LinkType>LINKED</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>width</Id>
+     <Value>0</Value>
+     <LinkType>LINKED</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+   </Parameters>
+  </Effect>
   <Effect/>
   <Effect/>
  </Effects>
