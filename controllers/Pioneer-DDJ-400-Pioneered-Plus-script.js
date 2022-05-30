@@ -985,12 +985,22 @@ PioneerDDJ400.beatFxOnOffPressed = function(_channel, _control, value) {
 
 
 
-PioneerDDJ400.ReleaseFX = function(_channel, _control, value) {
-    if (value===0x7F) {
-       engine.brake(deck, true,10);
-    } else {
-    	engine.brake(deck, false);
+PioneerDDJ400.beatFxOnOffShiftPressed = function(_channel, control, value, _status, group) {
+    var deck1 = engine.getValue(group, "group_[Channel1]_enable");
+    var deck2 = engine.getValue(group, "group_[Channel2]_enable");
+    var deck=0;
+    if(deck1) {
+      deck=1;
     }
+    if(deck2) {
+     deck=2;
+    }
+    if (value===0x7F) {
+       engine.brake(deck, true,80);
+    } else {
+        engine.softStart(deck, true,160);
+    }
+};
 
 PioneerDDJ400.BeatFxRotate = function(_channel, _control, value) {
     engine.setValue("[EffectRack1_EffectUnit1]", "super1", value/128);
