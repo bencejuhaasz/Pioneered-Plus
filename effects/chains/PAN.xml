@@ -2,10 +2,10 @@
 <EffectChain>
  <Name>PAN</Name>
  <MixMode>DRY/WET</MixMode>
- <SuperParameterValue>0.71873</SuperParameterValue>
+ <SuperParameterValue>0</SuperParameterValue>
  <Effects>
   <Effect>
-   <MetaParameterValue>0.71873</MetaParameterValue>
+   <MetaParameterValue>0</MetaParameterValue>
    <Id>org.mixxx.effects.threebandbiquadeq</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
@@ -54,27 +54,27 @@
    </Parameters>
   </Effect>
   <Effect>
-   <MetaParameterValue>0.71873</MetaParameterValue>
+   <MetaParameterValue>0</MetaParameterValue>
    <Id>org.mixxx.effects.autopan</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
      <Id>period</Id>
-     <Value>1.12508</Value>
-     <LinkType>LINKED</LinkType>
+     <Value>4</Value>
+     <LinkType>NONE</LinkType>
      <LinkInversion>1</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>smoothing</Id>
-     <Value>0.31662</Value>
+     <Value>0.25</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
      <Id>width</Id>
-     <Value>0.71873</Value>
+     <Value>0</Value>
      <LinkType>LINKED</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
