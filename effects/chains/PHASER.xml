@@ -32,7 +32,7 @@
     </Parameter>
     <Parameter>
      <Id>killLow</Id>
-     <Value>1</Value>
+     <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
@@ -46,7 +46,7 @@
     </Parameter>
     <Parameter>
      <Id>killHigh</Id>
-     <Value>1</Value>
+     <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>

@@ -6,47 +6,54 @@
  <Effects>
   <Effect>
    <MetaParameterValue>0</MetaParameterValue>
-   <Id>org.mixxx.effects.threebandbiquadeq</Id>
+   <Id>org.mixxx.effects.tremolo</Id>
    <BackendType>Built-In</BackendType>
    <Parameters>
     <Parameter>
-     <Id>low</Id>
+     <Id>depth</Id>
      <Value>1</Value>
+     <LinkType>LINKED_LEFT_RIGHT</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>rate</Id>
+     <Value>8</Value>
+     <LinkType>LINKED_LEFT_RIGHT</LinkType>
+     <LinkInversion>0</LinkInversion>
+     <Hidden>0</Hidden>
+    </Parameter>
+    <Parameter>
+     <Id>width</Id>
+     <Value>0.5</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>mid</Id>
-     <Value>1</Value>
+     <Id>waveform</Id>
+     <Value>0.5</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>high</Id>
-     <Value>1</Value>
-     <LinkType>NONE</LinkType>
-     <LinkInversion>0</LinkInversion>
-     <Hidden>0</Hidden>
-    </Parameter>
-    <Parameter>
-     <Id>killLow</Id>
+     <Id>phase</Id>
      <Value>0</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>killMid</Id>
-     <Value>0</Value>
+     <Id>quantize</Id>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
     <Parameter>
-     <Id>killHigh</Id>
-     <Value>0</Value>
+     <Id>triplet</Id>
+     <Value>1</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
@@ -60,8 +67,8 @@
    <Parameters>
     <Parameter>
      <Id>lpf</Id>
-     <Value>21257.3</Value>
-     <LinkType>NONE</LinkType>
+     <Value>13</Value>
+     <LinkType>LINKED_LEFT</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
@@ -75,7 +82,7 @@
     <Parameter>
      <Id>hpf</Id>
      <Value>13</Value>
-     <LinkType>LINKED</LinkType>
+     <LinkType>LINKED_RIGHT</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
     </Parameter>
