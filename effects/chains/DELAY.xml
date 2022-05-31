@@ -60,7 +60,7 @@
    <Parameters>
     <Parameter>
      <Id>delay_time</Id>
-     <Value>1.03502</Value>
+     <Value>0.263934</Value>
      <LinkType>NONE</LinkType>
      <LinkInversion>0</LinkInversion>
      <Hidden>0</Hidden>
