@@ -312,7 +312,7 @@ PioneerDDJ400.PADFX1 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -352,7 +352,7 @@ PioneerDDJ400.PADFX2 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",2);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -392,7 +392,7 @@ PioneerDDJ400.PADFX3 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",3);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -431,7 +431,7 @@ PioneerDDJ400.PADFX4 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",4);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -471,7 +471,7 @@ PioneerDDJ400.PADFX5 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -511,7 +511,7 @@ PioneerDDJ400.PADFX6 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",2);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -554,7 +554,7 @@ PioneerDDJ400.PADFX7 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",3);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
@@ -596,7 +596,7 @@ PioneerDDJ400.PADFX8 = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",4);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix_mode",0);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
