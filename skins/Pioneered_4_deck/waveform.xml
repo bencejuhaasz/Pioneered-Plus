@@ -96,12 +96,6 @@
         <SignalLowColor>#007de1</SignalLowColor>
         <SignalMidColor>#007de1</SignalMidColor>
         <SignalHighColor>#007de1</SignalHighColor>
-	<DefaultMark>
-          <Align>bottom|right</Align>
-          <Color>#FF0000</Color>
-          <TextColor>#FFFFFF</TextColor>
-         <Text> %1 </Text>
-        </DefaultMark>
         <Mark>
           <Control>cue_point</Control>
           <Text>CUE</Text>
