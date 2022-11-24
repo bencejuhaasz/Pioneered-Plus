@@ -17,7 +17,7 @@ Big thanks Sven Boekelder, aka @timewasternl for creating the awesome skin I'm b
 * 3.: Have fun DJ'ing:)
 
 # Infos
-* Rekordbox USB's need to be mounted at /media/<username>/SOMETHING-XX
+* Rekordbox USB's need to be mounted at /media/your username/SOMETHING-XX
 * If you're using a raspberry pi, I recommend Raspberry Pi OS Lite and then installing openbox to minimize software bloat. Feel free to use the provided desktop file, for autostart put it into `~/.config/autostart/` . It requires sudo, but it changes real time priority and gets rid of the otherwise present ui lags. 
 
 # Requirements
