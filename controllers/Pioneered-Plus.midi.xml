@@ -1627,7 +1627,7 @@
             </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX1</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX1 Left</description>
                 <status>0x97</status>
                 <midino>0x10</midino>
@@ -1637,7 +1637,7 @@
             </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX2</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX2 Left</description>
                 <status>0x97</status>
                 <midino>0x11</midino>
@@ -1647,7 +1647,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX3</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX3 Left</description>
                 <status>0x97</status>
                 <midino>0x12</midino>
@@ -1657,7 +1657,7 @@
             </control>
 	    <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX4</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX4 Left</description>
                 <status>0x97</status>
                 <midino>0x13</midino>
@@ -1667,7 +1667,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX5</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX5 Left</description>
                 <status>0x97</status>
                 <midino>0x14</midino>
@@ -1677,7 +1677,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX6</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX6 Left</description>
                 <status>0x97</status>
                 <midino>0x15</midino>
@@ -1687,7 +1687,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX7</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX7 Left</description>
                 <status>0x97</status>
                 <midino>0x16</midino>
@@ -1697,7 +1697,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>PioneerDDJ400.PADFX8</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX8 Left</description>
                 <status>0x97</status>
                 <midino>0x17</midino>
@@ -2387,7 +2387,7 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX1</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX1 Right</description>
                 <status>0x99</status>
                 <midino>0x10</midino>
@@ -2397,7 +2397,7 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX2</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX2 Right</description>
                 <status>0x99</status>
                 <midino>0x11</midino>
@@ -2407,7 +2407,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX3</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX3 Right</description>
                 <status>0x99</status>
                 <midino>0x12</midino>
@@ -2417,7 +2417,7 @@
             </control>
 	    <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX4</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX4 Right</description>
                 <status>0x99</status>
                 <midino>0x13</midino>
@@ -2427,7 +2427,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX5</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX5 Right</description>
                 <status>0x99</status>
                 <midino>0x14</midino>
@@ -2437,7 +2437,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX6</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX6 Right</description>
                 <status>0x99</status>
                 <midino>0x15</midino>
@@ -2447,7 +2447,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX7</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX7 Right</description>
                 <status>0x99</status>
                 <midino>0x16</midino>
@@ -2457,7 +2457,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>PioneerDDJ400.PADFX8</key>
+                <key>PioneerDDJ400.PADFX</key>
                 <description>PADFX8 Right</description>
                 <status>0x99</status>
                 <midino>0x17</midino>
