@@ -279,7 +279,7 @@ PioneerDDJ400.beatFxSelectPressed = function(_channel, _control, value) {
 
 PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
   var preset = 1;//parseInt(control, 16)-16+1;
-
+  var amount = 0.4;
   if(control==0x11) {
     preset = 2;
   }
@@ -291,15 +291,19 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
   }
   if(control==0x14) {
     preset = 5;
+    amount = 0.7;
   }
   if(control==0x15) {
     preset = 6;
+    amount = 0.7;
   }
   if(control==0x16) {
     preset = 7;
+    amount = 0.7;
   }
   if(control==0x17) {
     preset = 8;
+    amount = 0.7;
   }
 	if (value) {
 		if (used_padfx_racks<3) {
@@ -325,7 +329,7 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "meta_toggle", 1);
       engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "meta_toggle", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",0.4);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","mix",amount);
 		  }
 
 	} else {
