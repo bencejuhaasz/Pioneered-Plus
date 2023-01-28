@@ -347,7 +347,7 @@ PioneerDDJ400.keyShiftDefault = function(_channel, control, value, _status, grou
 PioneerDDJ400.keyShift1 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+1)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+0)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -356,7 +356,7 @@ PioneerDDJ400.keyShift1 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift2 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+2)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+5)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -364,7 +364,7 @@ PioneerDDJ400.keyShift2 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift3 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+3)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+10)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -372,7 +372,7 @@ PioneerDDJ400.keyShift3 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift4 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+4)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+15)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -380,7 +380,7 @@ PioneerDDJ400.keyShift4 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift5 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+5)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")-5)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -388,7 +388,7 @@ PioneerDDJ400.keyShift5 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift6 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+6)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+10)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -396,7 +396,7 @@ PioneerDDJ400.keyShift6 = function(_channel, control, value, _status, group) {
 PioneerDDJ400.keyShift7 = function(_channel, control, value, _status, group) {
 	if(value) {
 		PioneerDDJ400.keyShiftPADLightsOff(_status);
-		engine.setValue(group, "key", (engine.getValue(group,"file_key")+7)%24);
+		engine.setValue(group, "key", (engine.getValue(group,"file_key")+15)%24);
 		midi.sendShortMsg(_status,control,value);
 	}
 };
@@ -439,7 +439,7 @@ PioneerDDJ400.keyboard1 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+1)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+5)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=1;
@@ -460,7 +460,7 @@ PioneerDDJ400.keyboard2 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+2)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+10)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=2;
@@ -481,7 +481,7 @@ PioneerDDJ400.keyboard3 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+3)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+15)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=3;
@@ -503,7 +503,7 @@ PioneerDDJ400.keyboard4 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+4)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")+20)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=4;
@@ -524,7 +524,7 @@ PioneerDDJ400.keyboard5 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+5)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")-5)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=5;
@@ -545,7 +545,7 @@ PioneerDDJ400.keyboard6 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+6)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")-10)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=6;
@@ -566,7 +566,7 @@ PioneerDDJ400.keyboard7 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+7)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")-15)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=7;
@@ -587,7 +587,7 @@ PioneerDDJ400.keyboard8 = function(_channel, control, value, _status, group) {
 		engine.setValue(group,"hotcue_"+keyboard_hc+"_goto",1);
 	} else {
 		if(keyboard_on) {
-			engine.setValue(group,"key",(engine.getValue(group,"file_key")+8)%24);
+			engine.setValue(group,"key",(engine.getValue(group,"file_key")-20)%24);
 			engine.setValue(group,"hotcue_"+keyboard_hc+"_gotoandplay",1);
 		} else {
 			keyboard_hc=8;
@@ -706,7 +706,7 @@ PioneerDDJ400.beatFxOnOffShiftPressed = function(_channel, control, value, _stat
     if (value===0x7F) {
        engine.brake(deck, true,60);
     } else {
-        engine.softStart(deck, true,100);
+        engine.softStart(deck, true,90);
     }
 };
 
