@@ -283,12 +283,12 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
 		if (used_padfx_racks<3) {
 
       if(group.includes("Channel1")) {
-				midi.sendShortMsg(0x97, 0x10, 0x7F);
+				midi.sendShortMsg(0x97, control, 0x7F);
 				engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_[Channel2]_enable",0);
 			}
 
       if(group.includes("Channel2")) {
-        midi.sendShortMsg(0x99, 0x10, 0x7F);
+        midi.sendShortMsg(0x99, control, 0x7F);
 				engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_[Channel1]_enable",0);
 			}
 
@@ -296,7 +296,7 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
 			var unit = used_padfx_racks+1;
 			padfx_units[preset-1]=unit;
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","group_"+group+"_enable",1);
-			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",1);
+			engine.setValue("[EffectRack1_EffectUnit"+unit+"]","loaded_chain_preset",preset);
 			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect1]", "enabled", 0);
      	engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect2]", "enabled", 1);
  			engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "enabled", 1);
@@ -315,10 +315,10 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
 		engine.setValue("[EffectRack1_EffectUnit"+unit+"_Effect3]", "meta_toggle", 1);
 
 		if(group.includes("Channel1")) {
-      midi.sendShortMsg(0x97, 0x10, 0x00);
+      midi.sendShortMsg(0x97, control, 0x00);
     }
     if(group.includes("Channel2")) {
-      midi.sendShortMsg(0x99, 0x10, 0x00);
+      midi.sendShortMsg(0x99, control, 0x00);
     }
 	}
 };
