@@ -290,19 +290,19 @@ PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
     preset = 4;
   }
   if(control==0x14) {
-    preset = 5;
+    preset = 1;
     amount = 0.7;
   }
   if(control==0x15) {
-    preset = 6;
+    preset = 2;
     amount = 0.7;
   }
   if(control==0x16) {
-    preset = 7;
+    preset = 3;
     amount = 0.7;
   }
   if(control==0x17) {
-    preset = 8;
+    preset = 4;
     amount = 0.7;
   }
 	if (value) {
