@@ -280,25 +280,25 @@ PioneerDDJ400.beatFxSelectPressed = function(_channel, _control, value) {
 PioneerDDJ400.PADFX = function(_channel, control, value, _status, group) {
   var preset = 1;//parseInt(control, 16)-16+1;
 
-  if(control=0x11) {
+  if(control==0x11) {
     preset = 2;
   }
-  if(control=0x12) {
+  if(control==0x12) {
     preset = 3;
   }
-  if(control=0x13) {
+  if(control==0x13) {
     preset = 4;
   }
-  if(control=0x14) {
+  if(control==0x14) {
     preset = 5;
   }
-  if(control=0x15) {
+  if(control==0x15) {
     preset = 6;
   }
-  if(control=0x16) {
+  if(control==0x16) {
     preset = 7;
   }
-  if(control=0x17) {
+  if(control==0x17) {
     preset = 8;
   }
 	if (value) {
