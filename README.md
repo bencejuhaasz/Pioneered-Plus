@@ -18,7 +18,7 @@ Big thanks Sven Boekelder, aka @timewasternl for creating the awesome skin I'm b
 
 # Infos
 * Rekordbox USB's need to be mounted at /media/your username/SOMETHING-XX
-* If you're using a raspberry pi, I recommend DietPi or Arch Linux ARM and then installing openbox to minimize software bloat. Feel free to use the provided desktop file, for autostart put it into `~/.config/autostart/` . It requires sudo, but it changes real time priority and gets rid of the otherwise present ui lags. 
+* If you're using a raspberry pi, I recommend DietPi OS and then installing openbox to minimize software bloat. Feel free to use the provided desktop file, for autostart put it into `~/.config/autostart/` . It requires sudo, but it changes real time priority and gets rid of the otherwise present ui lags. 
 
 # Requirements
 * Mixxx built from latest master branch (2.4 alpha)
