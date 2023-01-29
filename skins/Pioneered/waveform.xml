@@ -93,9 +93,9 @@
         <BeatColor>#40ffffff</BeatColor>
         <PlayPosColor>#fff</PlayPosColor>
         <SignalColor>#32323c</SignalColor>
-        <SignalLowColor>#c95a00</SignalLowColor>
-        <SignalMidColor>#f6e9d3</SignalMidColor>
-        <SignalHighColor>#004ee4</SignalHighColor>
+        <SignalLowColor>#004ee4</SignalLowColor>
+        <SignalMidColor>#c95a00</SignalMidColor>
+        <SignalHighColor>#f6e9d3</SignalHighColor>
         <Mark>
           <Control>cue_point</Control>
           <Text>CUE</Text>
