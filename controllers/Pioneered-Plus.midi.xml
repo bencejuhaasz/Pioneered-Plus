@@ -1506,7 +1506,7 @@
                 </options>
             </control>
             <control>
-                <group>[Library]</group>
+                <group>[Tab]</group>
                 <key>library</key>
                 <description>BROWSE - press - Move cursor between track list and tree view</description>
                 <status>0x96</status>
