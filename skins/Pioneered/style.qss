@@ -1,15 +1,4 @@
-/* Pioneer Colours:
 
-Play button: #6ee128
-Cue button: #eb870f
-Slip button: #d73535
-Tabs on top: #c3d541
-Headers: #32323c
-Title bg: #112f5c
-Blue: #2d85cd
-White: #e5e6ea
-
-*/
 
 /* DEBUG
 * {
@@ -27,7 +16,7 @@ White: #e5e6ea
 
 QMenuBar, QMenuBar::item, QMenu, QMenu::item {
   background-color: black;
-  color: gray;
+  color: #222222;
 }
 
 QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
@@ -113,7 +102,7 @@ WPushButton[value="1"]:hover {
 }
 
 #DeckHeader {
-  background-color: #112f5c;
+  background-color: #222222;
   padding: 2px;
 }
 
@@ -180,7 +169,7 @@ WEffectChainPresetSelector {
 }
 
 #EffectToggle {
-  color: gray;
+  color: #222222;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -208,7 +197,7 @@ WEffectChainPresetSelector {
 /************************************************************************/
 
 #LibraryWrapper QScrollBar {
-  background-color: gray;
+  background-color: #222222;
 }
 
 #LibraryWrapper QScrollBar::handle:horizontal {
@@ -237,7 +226,7 @@ WEffectChainPresetSelector {
 }
 
 #LibraryWrapper WTrackTableViewHeader::section {
-  background-color: #32323c;
+  background-color: #222222;
   color: #e5e6ea;
   font-weight: bold;
   margin: 2px;
@@ -247,16 +236,16 @@ WEffectChainPresetSelector {
 #LibraryWrapper QTableView,
 #LibraryWrapper WLibraryTextBrowser {
   background-color: black;
-  alternate-background-color: #32323c;
+  alternate-background-color: #222222;
   selection-background-color: #e5e6ea;
   color: white;
   selection-color: black;
 }
 
 #LibraryWrapper WLibrarySidebar {
-  background-color: #32323c;
+  background-color: #222222;
   selection-background-color: #e5e6ea;
-  border-left: 4px solid gray;
+  border-left: 4px solid #222222;
   color: #e5e6ea;
   font-weight: bold;
   selection-color: black;
@@ -267,7 +256,7 @@ WEffectChainPresetSelector {
 #LibraryWrapper QSpinBox,
 #LibraryWrapper QComboBox,
 #LibraryWrapper QComboBox QAbstractScrollArea {
-  background-color: #32323c;
+  background-color: #222222;
   color: #e5e6ea;
 }
 
@@ -277,7 +266,7 @@ WLabel {
 
 /* Library Search */
 #SearchBox {
-  background-color: #112f5c;
+  background-color: #222222;
   border-radius: 0;
   font-size: 20px;
   font-weight: bold;
@@ -290,7 +279,7 @@ WLabel {
 /************************************************************************/
 
 #BeatFX_Container {
-  border: 2px solid #32323c;
+  border: 2px solid #222222;
   margin-left: 10px;
   qproperty-layoutAlignment: 'AlignCenter | AlignTop';
 }
@@ -351,14 +340,6 @@ WLabel {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#WaveformInfo_Key_Icon {
-  background-color: #e5e6ea;
-  border-radius: 2px;
-  font-size: 14px;
-  margin: 4px;
-  padding: -6px -6px -3px -2px;
-}
-
 #WaveformInfo_KeylockButton {
   image: url(skin:icons/keylock.svg) no-repeat center center;
 }
@@ -380,13 +361,13 @@ WLabel {
 }
 
 #TabControls WPushButton[value="0"] {
-  border: 2px solid gray;
-  color: gray;
+  border: 2px solid #222222;
+  color: #222222;
 }
 
 #TabControls WPushButton[value="1"] {
-  border: 2px solid #c3d541;
-  color: #c3d541;
+  border: 2px solid #0054e2;
+  color: #0054e2;
 }
 
 /************************************************************************/
