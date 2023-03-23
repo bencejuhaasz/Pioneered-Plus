@@ -21,6 +21,6 @@ Big thanks Sven Boekelder, aka @timewasternl for creating the awesome skin I'm b
 * If you're using a raspberry pi, I recommend DietPi OS and then installing openbox to minimize software bloat. Feel free to use the provided desktop file, for autostart put it into `~/.config/autostart/` . It requires sudo, but it changes real time priority and gets rid of the otherwise present ui lags. 
 
 # Requirements
-* Mixxx built from latest master branch (2.4 alpha)
+* Mixxx built from 2.4 branch
 * Touch screen (will work otherwise, but not as intended)
 * DDJ-400 (will work otherwise, but not as intended)
